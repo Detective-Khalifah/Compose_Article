@@ -12,6 +12,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -42,7 +43,8 @@ fun Article(modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         Image(
             painter = painterResource(id = R.drawable.bg_compose_background),
-            contentDescription = null
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth,
         )
         Text(
             text = stringResource(R.string.jetpack_compose_tutorial_heading),
